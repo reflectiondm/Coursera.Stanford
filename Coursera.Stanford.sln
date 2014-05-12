@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursera.Stanford.Week1", "Coursera.Stanford.Week1\Coursera.Stanford.Week1.csproj", "{EE5109D4-35F3-4E79-BB50-2838DA8C23F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursera.Stanford.Implementations", "Coursera.Stanford.Implementations\Coursera.Stanford.Implementations.csproj", "{DA3115EB-8170-458F-8B17-06E803B3AF4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courser.Stanford.Tests", "Courser.Stanford.Tests\Courser.Stanford.Tests.csproj", "{22D1CB89-FBF2-438C-859E-3194E31E0EEF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE5109D4-35F3-4E79-BB50-2838DA8C23F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE5109D4-35F3-4E79-BB50-2838DA8C23F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE5109D4-35F3-4E79-BB50-2838DA8C23F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE5109D4-35F3-4E79-BB50-2838DA8C23F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA3115EB-8170-458F-8B17-06E803B3AF4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA3115EB-8170-458F-8B17-06E803B3AF4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA3115EB-8170-458F-8B17-06E803B3AF4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA3115EB-8170-458F-8B17-06E803B3AF4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
