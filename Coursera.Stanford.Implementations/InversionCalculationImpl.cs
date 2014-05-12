@@ -25,7 +25,7 @@ namespace Coursera.Stanford.Implementations
                 var parts = Split(input);
                 var leftResult = CountAndSort(parts.Item1);
                 var rightResult = CountAndSort(parts.Item2);
-                var split = CountSplitInv(input);
+                var split = CountSplitInv(leftResult.IntermediateArray, rightResult.IntermediateArray);
 
                 result.Count = leftResult.Count + rightResult.Count + split.Count;
             }
@@ -33,7 +33,7 @@ namespace Coursera.Stanford.Implementations
             return result;
         }
 
-        private IntermediateResult CountSplitInv(long[] input)
+        private IntermediateResult CountSplitInv(long[] left, long[] right)
         {
             throw new NotImplementedException();
         }
