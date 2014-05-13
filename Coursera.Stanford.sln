@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Coursera.Stanford.Implement
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Courser.Stanford.Tests", "Courser.Stanford.Tests\Courser.Stanford.Tests.csproj", "{22D1CB89-FBF2-438C-859E-3194E31E0EEF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflectiondm.Utils", "Reflectiondm.Utils\Reflectiondm.Utils.csproj", "{D710F798-862A-43D8-840C-2CD70D7C20EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflectiondm.Utils.Tests", "Reflectiondm.Utils.Tests\Reflectiondm.Utils.Tests.csproj", "{A24A1AAD-D840-4C8F-AFA8-9297752735FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +29,14 @@ Global
 		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22D1CB89-FBF2-438C-859E-3194E31E0EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D710F798-862A-43D8-840C-2CD70D7C20EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D710F798-862A-43D8-840C-2CD70D7C20EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D710F798-862A-43D8-840C-2CD70D7C20EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D710F798-862A-43D8-840C-2CD70D7C20EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A24A1AAD-D840-4C8F-AFA8-9297752735FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A24A1AAD-D840-4C8F-AFA8-9297752735FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A24A1AAD-D840-4C8F-AFA8-9297752735FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A24A1AAD-D840-4C8F-AFA8-9297752735FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
