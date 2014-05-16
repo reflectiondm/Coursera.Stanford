@@ -8,7 +8,7 @@ namespace Coursera.Stanford.Implementations
 {
     public class InversionCalculationImpl
     {
-        public int Calc(long[] input)
+        public long Calc(long[] input)
         {
             var result = CountAndSort(input);
             return result.Count;
@@ -95,7 +95,7 @@ namespace Coursera.Stanford.Implementations
 
     public class IntermediateResult
     {
-        public int Count { get; set; }
+        public long Count { get; set; }
         public long[] IntermediateArray { get; set; }
     }
 }

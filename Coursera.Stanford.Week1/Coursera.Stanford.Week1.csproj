@@ -52,6 +52,16 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Coursera.Stanford.Implementations\Coursera.Stanford.Implementations.csproj">
+      <Project>{da3115eb-8170-458f-8b17-06e803b3af4b}</Project>
+      <Name>Coursera.Stanford.Implementations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Reflectiondm.Utils\Reflectiondm.Utils.csproj">
+      <Project>{d710f798-862a-43d8-840c-2cd70d7c20ee}</Project>
+      <Name>Reflectiondm.Utils</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

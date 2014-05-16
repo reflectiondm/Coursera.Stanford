@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Coursera.Stanford.Implementations;
 using System.Collections.Generic;
 using System.Linq;
+using Reflectiondm.Utils;
 
 namespace Coursera.Stanford.Tests
 {
@@ -173,6 +174,20 @@ namespace Coursera.Stanford.Tests
             AssertSequencesAreEqual(expected, result.IntermediateArray);
         }
 
+        [TestMethod]
+        [TestCategory("Integration")]
+        public void Count_HugeArray_ArrayIsSorted()
+        {
+            var input = FileHelper.GetArrayFromFile("IntegerArray.txt");
+
+            var expected = input.OrderBy(d => d).ToArray();
+
+            var result = sut.CountAndSort(input);
+
+            AssertSequencesAreEqual(expected, result.IntermediateArray);
+            Assert.AreEqual(2407905288, result.Count);
+        }
+
         private void AssertMainRoutine(long[] input, int expected)
         {
             var result = sut.Calc(input);
@@ -184,14 +199,15 @@ namespace Coursera.Stanford.Tests
         {
             var leftEn = left.GetEnumerator();
             var rightEn = right.GetEnumerator();
-
+            int i = 0;
             while (leftEn.MoveNext())
             {
                 if (!rightEn.MoveNext())
                     Assert.Fail("Sequences have different number of elements");
 
                 if (!leftEn.Current.Equals(rightEn.Current))
-                    Assert.Fail("Sequences have different elements");
+                    Assert.Fail(string.Format("Sequences have different elements at index {0}", i));
+                i++;
             }
         }
     }
