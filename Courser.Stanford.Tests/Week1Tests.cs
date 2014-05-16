@@ -40,6 +40,29 @@ namespace Coursera.Stanford.Tests
         }
 
         [TestMethod]
+        public void CountSplitInv_OneElementArrays_ReturnsSortedArray()
+        {
+            var left = new long[] { 1 };
+            var right = new long[] { 2 };
+            var expectedArray = new long[] { 1, 2 };
+
+            var result = sut.CountSplitInv(left, right);
+
+            AssertSequencesAreEqual(expectedArray, result.IntermediateArray);
+        }
+
+        [TestMethod]
+        public void CountSplitInv_NoElementArrays_ReturnsSortedArray()
+        {
+            var left = new long[] { };
+            var right = new long[] { };
+
+            var result = sut.CountSplitInv(left, right);
+
+            Assert.AreEqual(0, result.IntermediateArray.Length);
+        }
+
+        [TestMethod]
         public void CountSplitInv_ReturnsInversionCount_TrivialCase()
         {
             var left = new long[] { 1, 3, 5 };
@@ -70,7 +93,7 @@ namespace Coursera.Stanford.Tests
         {
             var input = new long[] { 1, 3, 5, 2, 4, 6, 7 };
 
-            var expectedLeft = new long[] { 1, 3, 5 , 2};
+            var expectedLeft = new long[] { 1, 3, 5, 2 };
             var expectedRight = new long[] { 4, 6, 7 };
             var result = sut.Split(input);
 

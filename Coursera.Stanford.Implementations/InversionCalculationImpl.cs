@@ -19,7 +19,10 @@ namespace Coursera.Stanford.Implementations
             var result = new IntermediateResult();
             //trivial case
             if (input.Length == 1)
+            {
                 result.Count = 0;
+                result.IntermediateArray = input;
+            }
             else
             {
                 var parts = Split(input);
@@ -28,6 +31,7 @@ namespace Coursera.Stanford.Implementations
                 var split = CountSplitInv(leftResult.IntermediateArray, rightResult.IntermediateArray);
 
                 result.Count = leftResult.Count + rightResult.Count + split.Count;
+                result.IntermediateArray = split.IntermediateArray;
             }
 
             return result;
@@ -75,7 +79,7 @@ namespace Coursera.Stanford.Implementations
             var rightLength = 0;
             var leftLength = 0;
             rightLength = input.Length / 2;
-            
+
             leftLength = (input.Length % 2) != 0 ?
                 rightLength + 1 :
                 rightLength;
