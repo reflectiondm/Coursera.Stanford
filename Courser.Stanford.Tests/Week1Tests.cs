@@ -2,7 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Coursera.Stanford.Implementations;
 
-namespace Courser.Stanford.Tests
+namespace Coursera.Stanford.Tests
 {
     [TestClass]
     public class Week1Tests
@@ -24,5 +24,22 @@ namespace Courser.Stanford.Tests
 
             Assert.AreEqual(3, result);
         }
+
+        [TestMethod]
+        public void CountSplitInv_ReturnsSortedArray()
+        {
+            var left = new long[] { 1, 3, 5 };
+            var right = new long[] { 2, 4, 6 };
+            var expectedArray = new long[] { 1, 2, 3, 4, 5, 6 };
+
+            var result = sut.CountSplitInv(left, right);
+
+            for (int i = 0; i < expectedArray.Length; i++)
+            {
+                Assert.AreEqual(expectedArray[i], result.IntermediateArray[i], 0.05);
+            }
+        }
+
+        
     }
 }

@@ -33,9 +33,38 @@ namespace Coursera.Stanford.Implementations
             return result;
         }
 
-        private IntermediateResult CountSplitInv(long[] left, long[] right)
+        public IntermediateResult CountSplitInv(long[] left, long[] right)
         {
-            throw new NotImplementedException();
+            var result = new IntermediateResult();
+            result.IntermediateArray = new long[left.Length + right.Length];
+            var resArr = result.IntermediateArray;
+            var i = 0;
+            var j = 0;
+
+            for (int k = 0; k < resArr.Length; k++)
+            {
+                if (i == left.Length)
+                {
+                    resArr[k] = right[j];
+                    break;
+                }
+                if (j == right.Length)
+                {
+                    resArr[k] = left[i];
+                    break;
+                }
+                if (left[i] < right[j])
+                {
+                    resArr[k] = left[i];
+                    i++;
+                }
+                else
+                {
+                    resArr[k] = right[j];
+                    j++;
+                }
+            }
+            return result;
         }
 
         private Tuple<long[], long[]> Split(long[] input)
@@ -44,7 +73,7 @@ namespace Coursera.Stanford.Implementations
         }
     }
 
-    internal class IntermediateResult
+    public class IntermediateResult
     {
         public int Count { get; set; }
         public long[] IntermediateArray { get; set; }
