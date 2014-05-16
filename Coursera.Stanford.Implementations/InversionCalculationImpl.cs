@@ -53,6 +53,8 @@ namespace Coursera.Stanford.Implementations
                     resArr[k] = left[i];
                     break;
                 }
+
+
                 if (left[i] < right[j])
                 {
                     resArr[k] = left[i];
@@ -61,15 +63,27 @@ namespace Coursera.Stanford.Implementations
                 else
                 {
                     resArr[k] = right[j];
+                    result.Count += left.Length - i;
                     j++;
                 }
             }
             return result;
         }
 
-        private Tuple<long[], long[]> Split(long[] input)
+        public Tuple<long[], long[]> Split(long[] input)
         {
-            throw new NotImplementedException();
+            var rightLength = 0;
+            var leftLength = 0;
+            rightLength = input.Length / 2;
+            
+            leftLength = (input.Length % 2) != 0 ?
+                rightLength + 1 :
+                rightLength;
+
+            var halfLenght = input.Length / 2;
+            return new Tuple<long[], long[]>(
+                input.Take(leftLength).ToArray(),
+                input.Skip(leftLength).ToArray());
         }
     }
 
