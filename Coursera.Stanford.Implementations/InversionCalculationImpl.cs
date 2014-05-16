@@ -14,11 +14,11 @@ namespace Coursera.Stanford.Implementations
             return result.Count;
         }
 
-        internal IntermediateResult CountAndSort(long[] input)
+        public IntermediateResult CountAndSort(long[] input)
         {
             var result = new IntermediateResult();
             //trivial case
-            if (input.Length == 1)
+            if (input.Length <= 1)
             {
                 result.Count = 0;
                 result.IntermediateArray = input;
@@ -50,16 +50,18 @@ namespace Coursera.Stanford.Implementations
                 if (i == left.Length)
                 {
                     resArr[k] = right[j];
-                    break;
+                    j++;
+                    continue;
                 }
                 if (j == right.Length)
                 {
                     resArr[k] = left[i];
-                    break;
+                    i++;
+                    continue;
                 }
 
 
-                if (left[i] < right[j])
+                if (left[i] <= right[j])
                 {
                     resArr[k] = left[i];
                     i++;
